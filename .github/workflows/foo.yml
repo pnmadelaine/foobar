@@ -1,7 +1,9 @@
 name: Test
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - 'foo-*'
 
 jobs:
   test:
@@ -9,4 +11,4 @@ jobs:
     steps:
       - name: Output the job id
         run: |
-          echo ${{ github.run_id }}
+          echo "hello"
